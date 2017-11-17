@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C8529551FBED544000EE153 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529541FBED544000EE153 /* AppDelegate.m */; };
+		2C85295B1FBED544000EE153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8529591FBED544000EE153 /* Main.storyboard */; };
+		2C85295D1FBED544000EE153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C85295C1FBED544000EE153 /* Assets.xcassets */; };
+		2C8529601FBED544000EE153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C85295E1FBED544000EE153 /* LaunchScreen.storyboard */; };
+		2C8529631FBED544000EE153 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529621FBED544000EE153 /* main.m */; };
+		2C85296D1FBED544000EE153 /* NinePointsImageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85296C1FBED544000EE153 /* NinePointsImageDemoTests.m */; };
+		2C8529781FBED544000EE153 /* NinePointsImageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529771FBED544000EE153 /* NinePointsImageDemoUITests.m */; };
+		2C8529881FBED584000EE153 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529861FBED584000EE153 /* MainViewController.m */; };
+		2C8529891FBED584000EE153 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8529871FBED584000EE153 /* MainViewController.xib */; };
+		2C8529901FBED680000EE153 /* UIImage+NinePoints.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85298F1FBED680000EE153 /* UIImage+NinePoints.m */; };
+		2C8529961FBED8D5000EE153 /* PointLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529921FBED8D4000EE153 /* PointLocation.m */; };
+		2C8529971FBED8D5000EE153 /* NinePatchContentRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529951FBED8D5000EE153 /* NinePatchContentRange.m */; };
+		2C85299C1FBEDBF8000EE153 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C85299B1FBEDBF7000EE153 /* Foundation.framework */; };
+		2C85299F1FBEDD85000EE153 /* NinePointsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85299E1FBEDD85000EE153 /* NinePointsView.m */; };
+		2C8529A31FBEDFF0000EE153 /* NinePointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529A11FBEDFEF000EE153 /* NinePointsViewController.m */; };
+		2C8529A41FBEDFF0000EE153 /* NinePointsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8529A21FBEDFF0000EE153 /* NinePointsViewController.xib */; };
+		2C8529A81FBEE4E0000EE153 /* stretchingOnesMorePoints.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C8529A61FBEE4E0000EE153 /* stretchingOnesMorePoints.9.png */; };
+		2C8529A91FBEE4E0000EE153 /* stretchingOnesPoints.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C8529A71FBEE4E0000EE153 /* stretchingOnesPoints.9.png */; };
+		66F6C708E3C045461057F728 /* libPods-NinePointsImageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E8D6281A828B321455D002 /* libPods-NinePointsImageDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C8529691FBED544000EE153 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C8529481FBED544000EE153 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C85294F1FBED544000EE153;
+			remoteInfo = NinePointsImageDemo;
+		};
+		2C8529741FBED544000EE153 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C8529481FBED544000EE153 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C85294F1FBED544000EE153;
+			remoteInfo = NinePointsImageDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18BD03AFE55EF9CA021D9C22 /* Pods-NinePointsImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinePointsImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NinePointsImageDemo/Pods-NinePointsImageDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2C8529501FBED544000EE153 /* NinePointsImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinePointsImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8529531FBED544000EE153 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C8529541FBED544000EE153 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C85295A1FBED544000EE153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C85295C1FBED544000EE153 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C85295F1FBED544000EE153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C8529611FBED544000EE153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C8529621FBED544000EE153 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C8529681FBED544000EE153 /* NinePointsImageDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinePointsImageDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C85296C1FBED544000EE153 /* NinePointsImageDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePointsImageDemoTests.m; sourceTree = "<group>"; };
+		2C85296E1FBED544000EE153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C8529731FBED544000EE153 /* NinePointsImageDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinePointsImageDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8529771FBED544000EE153 /* NinePointsImageDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePointsImageDemoUITests.m; sourceTree = "<group>"; };
+		2C8529791FBED544000EE153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C8529851FBED584000EE153 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2C8529861FBED584000EE153 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		2C8529871FBED584000EE153 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		2C85298E1FBED680000EE153 /* UIImage+NinePoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+NinePoints.h"; sourceTree = "<group>"; };
+		2C85298F1FBED680000EE153 /* UIImage+NinePoints.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NinePoints.m"; sourceTree = "<group>"; };
+		2C8529921FBED8D4000EE153 /* PointLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointLocation.m; sourceTree = "<group>"; };
+		2C8529931FBED8D4000EE153 /* PointLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointLocation.h; sourceTree = "<group>"; };
+		2C8529941FBED8D5000EE153 /* NinePatchContentRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinePatchContentRange.h; sourceTree = "<group>"; };
+		2C8529951FBED8D5000EE153 /* NinePatchContentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinePatchContentRange.m; sourceTree = "<group>"; };
+		2C8529991FBEDA4D000EE153 /* NinePointsImageDemo-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NinePointsImageDemo-PrefixHeader.pch"; sourceTree = "<group>"; };
+		2C85299B1FBEDBF7000EE153 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C85299D1FBEDD85000EE153 /* NinePointsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinePointsView.h; sourceTree = "<group>"; };
+		2C85299E1FBEDD85000EE153 /* NinePointsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePointsView.m; sourceTree = "<group>"; };
+		2C8529A01FBEDFEF000EE153 /* NinePointsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinePointsViewController.h; sourceTree = "<group>"; };
+		2C8529A11FBEDFEF000EE153 /* NinePointsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePointsViewController.m; sourceTree = "<group>"; };
+		2C8529A21FBEDFF0000EE153 /* NinePointsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NinePointsViewController.xib; sourceTree = "<group>"; };
+		2C8529A61FBEE4E0000EE153 /* stretchingOnesMorePoints.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stretchingOnesMorePoints.9.png; sourceTree = "<group>"; };
+		2C8529A71FBEE4E0000EE153 /* stretchingOnesPoints.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stretchingOnesPoints.9.png; sourceTree = "<group>"; };
+		5FD64FEA1E0C11A8E7DFD305 /* Pods-NinePointsImageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinePointsImageDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NinePointsImageDemo/Pods-NinePointsImageDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C6E8D6281A828B321455D002 /* libPods-NinePointsImageDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NinePointsImageDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C85294D1FBED544000EE153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C85299C1FBEDBF8000EE153 /* Foundation.framework in Frameworks */,
+				66F6C708E3C045461057F728 /* libPods-NinePointsImageDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8529651FBED544000EE153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8529701FBED544000EE153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C8529471FBED544000EE153 = {
+			isa = PBXGroup;
+			children = (
+				2C8529521FBED544000EE153 /* NinePointsImageDemo */,
+				2C85296B1FBED544000EE153 /* NinePointsImageDemoTests */,
+				2C8529761FBED544000EE153 /* NinePointsImageDemoUITests */,
+				2C8529511FBED544000EE153 /* Products */,
+				2C85299A1FBEDBF7000EE153 /* Frameworks */,
+				C858C56ACF1D9193B394D715 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		2C8529511FBED544000EE153 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C8529501FBED544000EE153 /* NinePointsImageDemo.app */,
+				2C8529681FBED544000EE153 /* NinePointsImageDemoTests.xctest */,
+				2C8529731FBED544000EE153 /* NinePointsImageDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C8529521FBED544000EE153 /* NinePointsImageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2C8529A51FBEE4E0000EE153 /* testResources */,
+				2C8529911FBED6BA000EE153 /* Models */,
+				2C85298A1FBED617000EE153 /* Categories */,
+				2C85298C1FBED618000EE153 /* Controller */,
+				2C85298D1FBED618000EE153 /* Utils */,
+				2C85298B1FBED617000EE153 /* View */,
+				2C8529531FBED544000EE153 /* AppDelegate.h */,
+				2C8529541FBED544000EE153 /* AppDelegate.m */,
+				2C8529591FBED544000EE153 /* Main.storyboard */,
+				2C85295C1FBED544000EE153 /* Assets.xcassets */,
+				2C85295E1FBED544000EE153 /* LaunchScreen.storyboard */,
+				2C8529611FBED544000EE153 /* Info.plist */,
+				2C8529621FBED544000EE153 /* main.m */,
+				2C8529991FBEDA4D000EE153 /* NinePointsImageDemo-PrefixHeader.pch */,
+				2C8529851FBED584000EE153 /* MainViewController.h */,
+				2C8529861FBED584000EE153 /* MainViewController.m */,
+				2C8529871FBED584000EE153 /* MainViewController.xib */,
+			);
+			path = NinePointsImageDemo;
+			sourceTree = "<group>";
+		};
+		2C85296B1FBED544000EE153 /* NinePointsImageDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C85296C1FBED544000EE153 /* NinePointsImageDemoTests.m */,
+				2C85296E1FBED544000EE153 /* Info.plist */,
+			);
+			path = NinePointsImageDemoTests;
+			sourceTree = "<group>";
+		};
+		2C8529761FBED544000EE153 /* NinePointsImageDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C8529771FBED544000EE153 /* NinePointsImageDemoUITests.m */,
+				2C8529791FBED544000EE153 /* Info.plist */,
+			);
+			path = NinePointsImageDemoUITests;
+			sourceTree = "<group>";
+		};
+		2C85298A1FBED617000EE153 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2C85298E1FBED680000EE153 /* UIImage+NinePoints.h */,
+				2C85298F1FBED680000EE153 /* UIImage+NinePoints.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2C85298B1FBED617000EE153 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C85299D1FBEDD85000EE153 /* NinePointsView.h */,
+				2C85299E1FBEDD85000EE153 /* NinePointsView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C85298C1FBED618000EE153 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C8529A01FBEDFEF000EE153 /* NinePointsViewController.h */,
+				2C8529A11FBEDFEF000EE153 /* NinePointsViewController.m */,
+				2C8529A21FBEDFF0000EE153 /* NinePointsViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C85298D1FBED618000EE153 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2C8529911FBED6BA000EE153 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C8529941FBED8D5000EE153 /* NinePatchContentRange.h */,
+				2C8529951FBED8D5000EE153 /* NinePatchContentRange.m */,
+				2C8529931FBED8D4000EE153 /* PointLocation.h */,
+				2C8529921FBED8D4000EE153 /* PointLocation.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C85299A1FBEDBF7000EE153 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C85299B1FBEDBF7000EE153 /* Foundation.framework */,
+				C6E8D6281A828B321455D002 /* libPods-NinePointsImageDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C8529A51FBEE4E0000EE153 /* testResources */ = {
+			isa = PBXGroup;
+			children = (
+				2C8529A61FBEE4E0000EE153 /* stretchingOnesMorePoints.9.png */,
+				2C8529A71FBEE4E0000EE153 /* stretchingOnesPoints.9.png */,
+			);
+			path = testResources;
+			sourceTree = "<group>";
+		};
+		C858C56ACF1D9193B394D715 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FD64FEA1E0C11A8E7DFD305 /* Pods-NinePointsImageDemo.debug.xcconfig */,
+				18BD03AFE55EF9CA021D9C22 /* Pods-NinePointsImageDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C85294F1FBED544000EE153 /* NinePointsImageDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C85297C1FBED544000EE153 /* Build configuration list for PBXNativeTarget "NinePointsImageDemo" */;
+			buildPhases = (
+				7C3BBBB3F1BFDAA08CF9A0D5 /* [CP] Check Pods Manifest.lock */,
+				2C85294C1FBED544000EE153 /* Sources */,
+				2C85294D1FBED544000EE153 /* Frameworks */,
+				2C85294E1FBED544000EE153 /* Resources */,
+				1E35D08848BD2E5F34049602 /* [CP] Embed Pods Frameworks */,
+				E882511F1DD5CE4D7F053362 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NinePointsImageDemo;
+			productName = NinePointsImageDemo;
+			productReference = 2C8529501FBED544000EE153 /* NinePointsImageDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C8529671FBED544000EE153 /* NinePointsImageDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C85297F1FBED544000EE153 /* Build configuration list for PBXNativeTarget "NinePointsImageDemoTests" */;
+			buildPhases = (
+				2C8529641FBED544000EE153 /* Sources */,
+				2C8529651FBED544000EE153 /* Frameworks */,
+				2C8529661FBED544000EE153 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C85296A1FBED544000EE153 /* PBXTargetDependency */,
+			);
+			name = NinePointsImageDemoTests;
+			productName = NinePointsImageDemoTests;
+			productReference = 2C8529681FBED544000EE153 /* NinePointsImageDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2C8529721FBED544000EE153 /* NinePointsImageDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C8529821FBED544000EE153 /* Build configuration list for PBXNativeTarget "NinePointsImageDemoUITests" */;
+			buildPhases = (
+				2C85296F1FBED544000EE153 /* Sources */,
+				2C8529701FBED544000EE153 /* Frameworks */,
+				2C8529711FBED544000EE153 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C8529751FBED544000EE153 /* PBXTargetDependency */,
+			);
+			name = NinePointsImageDemoUITests;
+			productName = NinePointsImageDemoUITests;
+			productReference = 2C8529731FBED544000EE153 /* NinePointsImageDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C8529481FBED544000EE153 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = chinaway;
+				TargetAttributes = {
+					2C85294F1FBED544000EE153 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					2C8529671FBED544000EE153 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2C85294F1FBED544000EE153;
+					};
+					2C8529721FBED544000EE153 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2C85294F1FBED544000EE153;
+					};
+				};
+			};
+			buildConfigurationList = 2C85294B1FBED544000EE153 /* Build configuration list for PBXProject "NinePointsImageDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C8529471FBED544000EE153;
+			productRefGroup = 2C8529511FBED544000EE153 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C85294F1FBED544000EE153 /* NinePointsImageDemo */,
+				2C8529671FBED544000EE153 /* NinePointsImageDemoTests */,
+				2C8529721FBED544000EE153 /* NinePointsImageDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C85294E1FBED544000EE153 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8529A41FBEDFF0000EE153 /* NinePointsViewController.xib in Resources */,
+				2C8529601FBED544000EE153 /* LaunchScreen.storyboard in Resources */,
+				2C8529A81FBEE4E0000EE153 /* stretchingOnesMorePoints.9.png in Resources */,
+				2C85295D1FBED544000EE153 /* Assets.xcassets in Resources */,
+				2C85295B1FBED544000EE153 /* Main.storyboard in Resources */,
+				2C8529891FBED584000EE153 /* MainViewController.xib in Resources */,
+				2C8529A91FBEE4E0000EE153 /* stretchingOnesPoints.9.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8529661FBED544000EE153 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8529711FBED544000EE153 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E35D08848BD2E5F34049602 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NinePointsImageDemo/Pods-NinePointsImageDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C3BBBB3F1BFDAA08CF9A0D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E882511F1DD5CE4D7F053362 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NinePointsImageDemo/Pods-NinePointsImageDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C85294C1FBED544000EE153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8529971FBED8D5000EE153 /* NinePatchContentRange.m in Sources */,
+				2C8529961FBED8D5000EE153 /* PointLocation.m in Sources */,
+				2C8529631FBED544000EE153 /* main.m in Sources */,
+				2C8529A31FBEDFF0000EE153 /* NinePointsViewController.m in Sources */,
+				2C85299F1FBEDD85000EE153 /* NinePointsView.m in Sources */,
+				2C8529881FBED584000EE153 /* MainViewController.m in Sources */,
+				2C8529901FBED680000EE153 /* UIImage+NinePoints.m in Sources */,
+				2C8529551FBED544000EE153 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C8529641FBED544000EE153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C85296D1FBED544000EE153 /* NinePointsImageDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C85296F1FBED544000EE153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8529781FBED544000EE153 /* NinePointsImageDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C85296A1FBED544000EE153 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C85294F1FBED544000EE153 /* NinePointsImageDemo */;
+			targetProxy = 2C8529691FBED544000EE153 /* PBXContainerItemProxy */;
+		};
+		2C8529751FBED544000EE153 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C85294F1FBED544000EE153 /* NinePointsImageDemo */;
+			targetProxy = 2C8529741FBED544000EE153 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C8529591FBED544000EE153 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C85295A1FBED544000EE153 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C85295E1FBED544000EE153 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C85295F1FBED544000EE153 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C85297A1FBED544000EE153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C85297B1FBED544000EE153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C85297D1FBED544000EE153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FD64FEA1E0C11A8E7DFD305 /* Pods-NinePointsImageDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LT945GEG63;
+				GCC_PREFIX_HEADER = "${SRCROOT}/NinePointsImageDemo/NinePointsImageDemo-PrefixHeader.pch";
+				INFOPLIST_FILE = NinePointsImageDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = china.majian.NinePointsImageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C85297E1FBED544000EE153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18BD03AFE55EF9CA021D9C22 /* Pods-NinePointsImageDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LT945GEG63;
+				GCC_PREFIX_HEADER = "${SRCROOT}/NinePointsImageDemo/NinePointsImageDemo-PrefixHeader.pch";
+				INFOPLIST_FILE = NinePointsImageDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = china.majian.NinePointsImageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2C8529801FBED544000EE153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LT945GEG63;
+				INFOPLIST_FILE = NinePointsImageDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = china.majian.NinePointsImageDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NinePointsImageDemo.app/NinePointsImageDemo";
+			};
+			name = Debug;
+		};
+		2C8529811FBED544000EE153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LT945GEG63;
+				INFOPLIST_FILE = NinePointsImageDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = china.majian.NinePointsImageDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NinePointsImageDemo.app/NinePointsImageDemo";
+			};
+			name = Release;
+		};
+		2C8529831FBED544000EE153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LT945GEG63;
+				INFOPLIST_FILE = NinePointsImageDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = china.majian.NinePointsImageDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NinePointsImageDemo;
+			};
+			name = Debug;
+		};
+		2C8529841FBED544000EE153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LT945GEG63;
+				INFOPLIST_FILE = NinePointsImageDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = china.majian.NinePointsImageDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NinePointsImageDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C85294B1FBED544000EE153 /* Build configuration list for PBXProject "NinePointsImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C85297A1FBED544000EE153 /* Debug */,
+				2C85297B1FBED544000EE153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C85297C1FBED544000EE153 /* Build configuration list for PBXNativeTarget "NinePointsImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C85297D1FBED544000EE153 /* Debug */,
+				2C85297E1FBED544000EE153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C85297F1FBED544000EE153 /* Build configuration list for PBXNativeTarget "NinePointsImageDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8529801FBED544000EE153 /* Debug */,
+				2C8529811FBED544000EE153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C8529821FBED544000EE153 /* Build configuration list for PBXNativeTarget "NinePointsImageDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C8529831FBED544000EE153 /* Debug */,
+				2C8529841FBED544000EE153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C8529481FBED544000EE153 /* Project object */;
+}
