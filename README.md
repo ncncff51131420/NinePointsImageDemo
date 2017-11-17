@@ -18,3 +18,7 @@ which may have multiple points, and the length of each point is stretched accord
 which means that the content fills the area. After the content exceeds this area, the image will be stretched
 
 Etc...
+
+
+
+if find some question or other suggest please tell me QQ:515588601@qq.com.
