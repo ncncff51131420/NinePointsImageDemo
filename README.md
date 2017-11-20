@@ -22,5 +22,7 @@ which means that the content fills the area. After the content exceeds this area
 Etc...
 
 
+ ![img](https://github.com/mjlovelf/NinePointsImageDemo/blob/master/ddd.gif)
 
 if find some question or other suggest please tell me QQ:515588601@qq.com.
+
