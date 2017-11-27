@@ -27,13 +27,13 @@
 - (IBAction)clickStretchingWithOnesMorePoints:(id)sender {
 
     NinePointsViewController *controller = [[NinePointsViewController alloc] initWithNibName:@"NinePointsViewController" bundle:nil];
-    controller.picName = @"stretchingOnesMorePoints";
+    controller.picName = @"bg_etcmap_callout";
     [self.navigationController pushViewController:controller animated:NO];
 }
 - (IBAction)clickStretchingWithSinglePoints:(id)sender {
     
     NinePointsViewController *controller = [[NinePointsViewController alloc] initWithNibName:@"NinePointsViewController" bundle:nil];
-    controller.picName = @"stretchingOnesPoints";
+    controller.picName = @"stretchingOnesPointsssss";
     [self.navigationController pushViewController:controller animated:NO];
 }
 

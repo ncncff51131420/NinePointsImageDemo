@@ -11,5 +11,5 @@
 
 @property (nonatomic, assign) float startLocation;
 @property (nonatomic, assign) float endLocation;
-@property (nonatomic, assign) float length;
+@property (nonatomic, assign) int length;
 @end

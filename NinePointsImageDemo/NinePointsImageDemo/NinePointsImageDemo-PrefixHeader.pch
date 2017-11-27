@@ -14,6 +14,7 @@
 #endif
 #import "PointLocation.h"
 #import "NinePatchContentRange.h"
+#import "NinePointVO.h"
 
 typedef struct _TURGBAPixel {
     UInt8 red;

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C35E8A41FC81296000ED28A /* bg_etcmap_callout.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C35E8A31FC81296000ED28A /* bg_etcmap_callout.9.png */; };
+		2C35E8A71FC90EA3000ED28A /* NinePointVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C35E8A61FC90EA3000ED28A /* NinePointVO.m */; };
+		2C35E8A91FC95A95000ED28A /* stretchingOnesPointsssss.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C35E8A81FC95A95000ED28A /* stretchingOnesPointsssss.9.png */; };
 		2C8529551FBED544000EE153 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529541FBED544000EE153 /* AppDelegate.m */; };
 		2C85295B1FBED544000EE153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8529591FBED544000EE153 /* Main.storyboard */; };
 		2C85295D1FBED544000EE153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C85295C1FBED544000EE153 /* Assets.xcassets */; };
@@ -47,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		18BD03AFE55EF9CA021D9C22 /* Pods-NinePointsImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinePointsImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NinePointsImageDemo/Pods-NinePointsImageDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2C35E8A31FC81296000ED28A /* bg_etcmap_callout.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_etcmap_callout.9.png; sourceTree = "<group>"; };
+		2C35E8A51FC90EA3000ED28A /* NinePointVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinePointVO.h; sourceTree = "<group>"; };
+		2C35E8A61FC90EA3000ED28A /* NinePointVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePointVO.m; sourceTree = "<group>"; };
+		2C35E8A81FC95A95000ED28A /* stretchingOnesPointsssss.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stretchingOnesPointsssss.9.png; sourceTree = "<group>"; };
 		2C8529501FBED544000EE153 /* NinePointsImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinePointsImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8529531FBED544000EE153 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C8529541FBED544000EE153 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -216,6 +223,8 @@
 				2C8529951FBED8D5000EE153 /* NinePatchContentRange.m */,
 				2C8529931FBED8D4000EE153 /* PointLocation.h */,
 				2C8529921FBED8D4000EE153 /* PointLocation.m */,
+				2C35E8A51FC90EA3000ED28A /* NinePointVO.h */,
+				2C35E8A61FC90EA3000ED28A /* NinePointVO.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,6 +241,8 @@
 		2C8529A51FBEE4E0000EE153 /* testResources */ = {
 			isa = PBXGroup;
 			children = (
+				2C35E8A81FC95A95000ED28A /* stretchingOnesPointsssss.9.png */,
+				2C35E8A31FC81296000ED28A /* bg_etcmap_callout.9.png */,
 				2C8529A61FBEE4E0000EE153 /* stretchingOnesMorePoints.9.png */,
 				2C8529A71FBEE4E0000EE153 /* stretchingOnesPoints.9.png */,
 			);
@@ -362,7 +373,9 @@
 				2C85295D1FBED544000EE153 /* Assets.xcassets in Resources */,
 				2C85295B1FBED544000EE153 /* Main.storyboard in Resources */,
 				2C8529891FBED584000EE153 /* MainViewController.xib in Resources */,
+				2C35E8A41FC81296000ED28A /* bg_etcmap_callout.9.png in Resources */,
 				2C8529A91FBEE4E0000EE153 /* stretchingOnesPoints.9.png in Resources */,
+				2C35E8A91FC95A95000ED28A /* stretchingOnesPointsssss.9.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +455,7 @@
 				2C85299F1FBEDD85000EE153 /* NinePointsView.m in Sources */,
 				2C8529881FBED584000EE153 /* MainViewController.m in Sources */,
 				2C8529901FBED680000EE153 /* UIImage+NinePoints.m in Sources */,
+				2C35E8A71FC90EA3000ED28A /* NinePointVO.m in Sources */,
 				2C8529551FBED544000EE153 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

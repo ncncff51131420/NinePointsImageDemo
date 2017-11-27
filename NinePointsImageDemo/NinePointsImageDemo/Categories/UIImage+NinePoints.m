@@ -7,8 +7,47 @@
 //
 #import "UIImage+NinePoints.h"
 
-@implementation UIImage (NinePoints)
+static   const  NSString *kNinePatchEndName = @".9.png";
 
+@implementation UIImage (NinePoints)
+#pragma mark - check
+
+- (BOOL)isNinePatchImageFormName:(NSString *)imageName{
+
+    BOOL isNinePatch = NO;
+    if (imageName && imageName.length >kNinePatchEndName.length) {
+        NSString *name = [imageName substringFromIndex:(imageName.length-kNinePatchEndName.length)];
+        if ([kNinePatchEndName isEqualToString:name]) {
+            isNinePatch = YES;
+        }
+    }
+    return isNinePatch;
+}
+
+- (BOOL)isNinePatchImageFormImage:(UIImage *)image{
+
+    BOOL isNinePatch = NO;
+
+    if (image) {
+        NSArray *bottomPixelRangeAry;
+        NSArray *rightPixelRangeAry;
+        UIImage *lowerStrip = [self lowerStrip];
+        if (lowerStrip) {
+            bottomPixelRangeAry = [lowerStrip blackAllPixelRangeAsHorizontalStrip];
+        }
+        if (bottomPixelRangeAry.count == 1) {
+            UIImage *rightStrip = [self rightStrip];
+            if (rightStrip) {
+                rightPixelRangeAry = [rightStrip blackAllPixelRangeAsVerticalStrip];
+            }
+            if (rightPixelRangeAry.count == 1) {
+                isNinePatch = YES;
+            }
+        }
+    }
+
+    return isNinePatch;
+}
 #pragma mark - allPointsAry
 -(NSArray *)blackAllPixelRangeInUpperStrip {
     NSArray *blackPixelRangeAry;
@@ -41,10 +80,9 @@
         PointLocation *startLocation = bottomPixelRangeAry[0];
         contentRange.leftEdgeDistance = startLocation.startLocation;
 
-        //其实理论上上底部和右边只能有一条线。这么取就可将问题图片正常显示，神知道ui怎么想的
         PointLocation *endLocation = bottomPixelRangeAry[bottomPixelRangeAry.count -1];
 
-        contentRange.rightEdgeDistance = endLocation.endLocation;
+        contentRange.rightEdgeDistance = lowerStrip.size.width - endLocation.endLocation;
     }
 
     UIImage *rightStrip = [self rightStrip];
@@ -55,10 +93,9 @@
         PointLocation *startLocation = rightPixelRangeAry[0];
         contentRange.topEdgeDistance = startLocation.startLocation;
 
-        //其实理论上上底部和右边只能有一条线。这么取就可将问题图片正常显示，神知道ui怎么想的
         PointLocation *endLocation = rightPixelRangeAry[rightPixelRangeAry.count -1];
 
-        contentRange.bottomEdgeDistance = endLocation.endLocation;
+        contentRange.bottomEdgeDistance =rightStrip.size.height - endLocation.endLocation;
     }
     return contentRange;
 }
@@ -182,6 +219,7 @@
                     if ((firstBlackPixel != NSNotFound) && (lastBlackPixel != NSNotFound)) {
 
                         NSInteger length = lastBlackPixel - firstBlackPixel;
+
                         if (length >= 0) {
                             length += 1;
                         } else {
@@ -258,6 +296,8 @@
                     if ((firstBlackPixel != NSNotFound) && (lastBlackPixel != NSNotFound)) {
 
                         NSInteger length = lastBlackPixel - firstBlackPixel;
+
+
                         if (length >= 0) {
                             length += 1;
                         } else {
