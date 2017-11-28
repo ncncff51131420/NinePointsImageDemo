@@ -27,7 +27,7 @@
 - (IBAction)clickStretchingWithOnesMorePoints:(id)sender {
 
     NinePointsViewController *controller = [[NinePointsViewController alloc] initWithNibName:@"NinePointsViewController" bundle:nil];
-    controller.picName = @"bg_etcmap_callout";
+    controller.picName = @"btn_login_normal";
     [self.navigationController pushViewController:controller animated:NO];
 }
 - (IBAction)clickStretchingWithSinglePoints:(id)sender {

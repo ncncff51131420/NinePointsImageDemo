@@ -6,6 +6,7 @@
 //  Copyright © 2017年 chinaway. All rights reserved.
 //
 #import "UIImage+NinePoints.h"
+#import "NinePatchUtils.h"
 
 static   const  NSString *kNinePatchEndName = @".9.png";
 
@@ -315,19 +316,88 @@ static   const  NSString *kNinePatchEndName = @".9.png";
     return turAry;
 }
 
-- (UIImage*)crop:(CGRect)rect
-{
-    rect = CGRectMake(rect.origin.x * self.scale,
-                      rect.origin.y * self.scale,
-                      rect.size.width * self.scale,
-                      rect.size.height * self.scale);
+- (NSArray *) getAllNinePatchAreaPoint:(UIImage *) image{
+    NSArray *ninePatchHorizontalPoints =  [image blackAllPixelRangeInUpperStrip];
+    NSArray *ninePatchVerticalPoints = [image blackAllPixelRangeInLeftStrip];
+    NSMutableArray *array   = [NSMutableArray arrayWithCapacity:1];
+    UIImage* ninepatch = [NinePatchUtils crop:CGRectMake(1, 1, image.size.width - 2, image.size.height - 2) image:image];
 
-    CGImageRef imageRef = CGImageCreateWithImageInRect([self CGImage], rect);
-    UIImage* result = [UIImage imageWithCGImage:imageRef
-                                          scale:self.scale
-                                    orientation:self.imageOrientation];
-    CGImageRelease(imageRef);
-    return result;
+    CGFloat ninePatchWidth  = [NinePatchUtils getImageWidth:ninepatch];
+    CGFloat ninePatchHeight = [NinePatchUtils getImageHeight:ninepatch];
+
+
+
+
+    if (ninePatchHorizontalPoints.count > 0) {
+        for (int i = 0 ;i<ninePatchHorizontalPoints.count ;i++) {
+
+            PointLocation *horizontalLocation = ninePatchHorizontalPoints[i];
+            //纵向有拉伸
+            if (ninePatchVerticalPoints.count > 0) {
+                for (int j = 0 ; j< ninePatchVerticalPoints.count ;j++) {
+
+                    PointLocation *verticalLocation = ninePatchVerticalPoints[j];
+
+                    NinePointVO * pointVO = [[NinePointVO alloc] init];
+                    pointVO.leftSpacing = horizontalLocation.startLocation;
+
+                    pointVO.rightSpacing = ninePatchWidth - horizontalLocation.endLocation;
+                    //宽度一个像素都不足的时候手动添加一点
+                    if (ninePatchWidth>0 &&(pointVO.rightSpacing + pointVO.leftSpacing == ninePatchWidth)) {
+                        pointVO.rightSpacing = pointVO.rightSpacing -1;
+                    }
+                    pointVO.topSpacing = verticalLocation.startLocation;
+                    pointVO.bottomSpacing = ninePatchHeight - verticalLocation.endLocation;
+
+                    if (ninePatchHeight>0 &&(pointVO.topSpacing + pointVO.bottomSpacing == ninePatchHeight)) {
+                        pointVO.bottomSpacing = pointVO.bottomSpacing -1;
+                    }
+
+                    if (j == 0) {
+                        pointVO.variableRegionWidth =  horizontalLocation.length;
+                    }
+                    if (i==0) {//垂直方向变化一次就可以了，因为i=0时候已经将垂直方向的高度全部变完了
+                        pointVO.variableRegionHeight = verticalLocation.length;
+                    }
+
+                    pointVO.horizontalSequence = i;
+                    pointVO.verticalSequence = j;
+                    [array addObject:pointVO];
+                }
+
+            }else{
+                NinePointVO * pointVO = [[NinePointVO alloc] init];
+                pointVO.leftSpacing = horizontalLocation.startLocation;
+                pointVO.rightSpacing = ninePatchWidth - horizontalLocation.endLocation;
+                pointVO.variableRegionWidth =  horizontalLocation.length;
+
+                pointVO.horizontalSequence = i;
+                [array addObject:pointVO];
+            }
+
+        }
+    }else{////横向无拉伸
+
+        //纵向有拉伸
+        if (ninePatchVerticalPoints.count > 0) {
+            for(int j = 0 ; j< ninePatchVerticalPoints.count ;j++) {
+
+                PointLocation *verticalLocation = ninePatchVerticalPoints[j];
+
+                NinePointVO * pointVO = [[NinePointVO alloc] init];
+                pointVO.topSpacing = verticalLocation.startLocation;
+                pointVO.bottomSpacing = ninePatchHeight - verticalLocation.endLocation;
+                pointVO.variableRegionHeight =  verticalLocation.length;
+                pointVO.verticalSequence = j;
+                [array addObject:pointVO];
+            }
+
+        }
+        //纵向也无拉伸返回array无内容
+    }
+
+    return array;
 }
+
 
 @end

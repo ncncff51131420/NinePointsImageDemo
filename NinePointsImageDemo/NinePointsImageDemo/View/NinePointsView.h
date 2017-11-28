@@ -10,12 +10,14 @@
 
 @interface NinePointsView : UIView
 
-@property(nonatomic, strong) NSArray *ninePatchHorizontalPoints;
-@property(nonatomic, strong) NSArray *ninePatchVerticalPoints;
-
-@property(nonatomic, retain)  UIImage *nineImage;
-
 @property(nonatomic, strong) NinePatchContentRange *contentRange;
 
+@property(nonatomic, strong) NSArray *ninePatchAry;
+
+@property(nonatomic, strong) UIImage  *ninePatchImage;
+
+
+
 -(void)redrawWithFontSize:(CGFloat)fontSize;
+
 @end

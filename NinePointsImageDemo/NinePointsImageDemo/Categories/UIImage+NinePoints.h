@@ -16,15 +16,10 @@
 //通过底部后右边的黑边数量判断，如果不等于1都认为不是点9图
 - (BOOL)isNinePatchImageFormImage:(UIImage *)image;
 
-// Subimage Slicing
--(UIImage *)subImageInRect:(CGRect)rect;
-
--(NSArray *)blackAllPixelRangeInLeftStrip;
-
--(NSArray *)blackAllPixelRangeInUpperStrip;
-
+//获取内容填充区大小
 -(NinePatchContentRange *)getImageContentRange;
 
-- (UIImage*)crop:(CGRect)rect;
+//获取所有变化的点的坐标及相互关系
+- (NSArray *) getAllNinePatchAreaPoint:(UIImage *) image;
 
 @end
