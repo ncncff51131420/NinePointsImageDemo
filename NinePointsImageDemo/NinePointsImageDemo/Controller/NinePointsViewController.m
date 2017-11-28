@@ -44,10 +44,8 @@
         if (ninepatch1) {
             NinePatchContentRange *contentRange = [ninepatch1  getImageContentRange];
             NSArray *ninePatchs = [ninepatch1 getAllNinePatchAreaPoint:ninepatch1];
-
-            [p_view setContentRange:contentRange];
-            [p_view setNinePatchAry:ninePatchs];
-            [p_view setNinePatchImage:[NinePatchUtils  crop:CGRectMake(1, 1, ninepatch1.size.width - 2, ninepatch1.size.height - 2) image:ninepatch1]];
+            [p_view initNinePatchImage:[NinePatchUtils  crop:CGRectMake(1, 1, ninepatch1.size.width - 2, ninepatch1.size.height - 2) image:ninepatch1]
+                            ninePoints:ninePatchs contentRange:contentRange];
         }
     }
     [p_view redrawWithFontSize:floorf([self.sliderView value])];

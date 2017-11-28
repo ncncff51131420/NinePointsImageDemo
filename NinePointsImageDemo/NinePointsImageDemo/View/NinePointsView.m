@@ -15,6 +15,11 @@ static const long kPrecisionUnit = 1000;
     CGFloat p_fontSize;
     CGFloat p_stretchingWidth;
     CGFloat p_stretchingHeight;
+    NinePatchContentRange *p_ContentRange;
+
+    NSArray *p_NinePatchAry;
+
+    UIImage  *p_NinePatchImage;
 }
 @end
 
@@ -37,12 +42,19 @@ static const long kPrecisionUnit = 1000;
     NSMutableParagraphStyle* paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
     NSDictionary*attribute = @{NSFontAttributeName:font,NSParagraphStyleAttributeName:paragraphStyle};
-    CGSize messageSize = [message boundingRectWithSize:CGSizeMake(rect.size.width-_contentRange.rightEdgeDistance-_contentRange.leftEdgeDistance, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+    CGSize messageSize = [message boundingRectWithSize:CGSizeMake(rect.size.width-p_ContentRange.rightEdgeDistance-p_ContentRange.leftEdgeDistance, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
 
    // [self drawImagePicture:messageSize.width height:messageSize.height ninePatchImage:_nineImage];
     [self startStretchingImage:messageSize.width height:messageSize.height];
 
-    [message drawWithRect:CGRectMake(_contentRange.leftEdgeDistance, _contentRange.topEdgeDistance,messageSize.width, messageSize.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil];
+    [message drawWithRect:CGRectMake(p_ContentRange.leftEdgeDistance, p_ContentRange.topEdgeDistance,messageSize.width, messageSize.height) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil];
+}
+
+-(void)initNinePatchImage:(UIImage *)image ninePoints:(NSArray *)ninePoints contentRange:(NinePatchContentRange *)contentRange{
+    p_ContentRange = contentRange;
+    p_NinePatchImage = image;
+    p_NinePatchAry = ninePoints;
+
 }
 #pragma mark - scale method
 
@@ -50,17 +62,17 @@ static const long kPrecisionUnit = 1000;
 - (void)startStretchingImage:(float)width height:(float)height{
 
 
-    NSMutableArray *mutableAry = [self.ninePatchAry mutableCopy];
+    NSMutableArray *mutableAry = [p_NinePatchImage mutableCopy];
 
     if (mutableAry.count>0) {
 
-        CGFloat ninePatchWidth  = [NinePatchUtils getImageWidth:_ninePatchImage];
-        CGFloat ninePatchHeight = [NinePatchUtils getImageHeight:_ninePatchImage];
+        CGFloat ninePatchWidth  = [NinePatchUtils getImageWidth:p_NinePatchImage];
+        CGFloat ninePatchHeight = [NinePatchUtils getImageHeight:p_NinePatchImage];
         //计算需要变化的宽高大小
         //需要变大的宽度
-        CGFloat stretchingWidth = width+_contentRange.leftEdgeDistance+_contentRange.rightEdgeDistance-ninePatchWidth;
+        CGFloat stretchingWidth = width+p_ContentRange.leftEdgeDistance+p_ContentRange.rightEdgeDistance-ninePatchWidth;
         //需要变高的高度
-        CGFloat stretchingHeight = height+_contentRange.topEdgeDistance+_contentRange.bottomEdgeDistance-ninePatchHeight;
+        CGFloat stretchingHeight = height+p_ContentRange.topEdgeDistance+p_ContentRange.bottomEdgeDistance-ninePatchHeight;
 
         if(stretchingWidth<0){
             stretchingWidth = 0;
@@ -68,9 +80,9 @@ static const long kPrecisionUnit = 1000;
         if(stretchingHeight<0){
             stretchingHeight = 0;
         }
-            p_stretchingWidth = [self getLengthStretch:self.ninePatchAry isWidth:YES];
+            p_stretchingWidth = [self getLengthStretch:p_NinePatchAry isWidth:YES];
 
-            p_stretchingHeight = [self getLengthStretch:self.ninePatchAry isWidth:NO];
+            p_stretchingHeight = [self getLengthStretch:p_NinePatchAry isWidth:NO];
 
         //水平单位拉伸区域拉伸比例
         float horizontalStretchUnitRatio = floor(stretchingWidth/p_stretchingWidth*kPrecisionUnit) / kPrecisionUnit ;
@@ -97,7 +109,7 @@ static const long kPrecisionUnit = 1000;
 
             if (i == 0) {
 
-                image =   [self drawImageWithNinePoint:vo image:_ninePatchImage resizableSize:size isLastImage:isLastImage];
+                image =   [self drawImageWithNinePoint:vo image:p_NinePatchImage resizableSize:size isLastImage:isLastImage];
             }else{
 
                 if(!image){

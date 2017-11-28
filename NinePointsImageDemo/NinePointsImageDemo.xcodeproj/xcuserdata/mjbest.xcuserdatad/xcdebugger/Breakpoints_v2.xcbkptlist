@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NinePointsImageDemo/View/NinePointsView.m"
-            timestampString = "533547845.699888"
+            timestampString = "533548433.100046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "NinePointsView"
             landmarkType = "3">
          </BreakpointContent>
