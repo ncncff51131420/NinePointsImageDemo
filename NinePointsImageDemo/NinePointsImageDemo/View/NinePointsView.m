@@ -8,6 +8,7 @@
 
 #import "NinePointsView.h"
 #import "NinePatchUtils.h"
+#import "UIImage+NinePoints.h"
 
 static const long kPrecisionUnit = 1000;
 
@@ -54,6 +55,17 @@ static const long kPrecisionUnit = 1000;
     p_ContentRange = contentRange;
     p_NinePatchImage = image;
     p_NinePatchAry = ninePoints;
+
+}
+
+-(void)initNinePatchImage:(UIImage *)image{
+
+    if (image) {
+        NinePatchContentRange *contentRange = [image  getImageContentRange];
+        NSArray *ninePatchs = [image getAllNinePatchAreaPoint:image];
+        [self initNinePatchImage:[NinePatchUtils  crop:CGRectMake(1, 1, image.size.width - 2, image.size.height - 2) image:image]
+                        ninePoints:ninePatchs contentRange:contentRange];
+    }
 
 }
 #pragma mark - scale method

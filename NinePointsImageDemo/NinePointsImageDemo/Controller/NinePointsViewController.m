@@ -7,8 +7,6 @@
 //
 
 #import "NinePointsViewController.h"
-#import "UIImage+NinePoints.h"
-#import "NinePatchUtils.h"
 #import "NinePointsView.h"
 #import "Masonry.h"
 
@@ -42,10 +40,7 @@
         UIImage *ninepatch1 = [[UIImage alloc] initWithContentsOfFile:filePath];
 
         if (ninepatch1) {
-            NinePatchContentRange *contentRange = [ninepatch1  getImageContentRange];
-            NSArray *ninePatchs = [ninepatch1 getAllNinePatchAreaPoint:ninepatch1];
-            [p_view initNinePatchImage:[NinePatchUtils  crop:CGRectMake(1, 1, ninepatch1.size.width - 2, ninepatch1.size.height - 2) image:ninepatch1]
-                            ninePoints:ninePatchs contentRange:contentRange];
+            [p_view initNinePatchImage:ninepatch1];
         }
     }
     [p_view redrawWithFontSize:floorf([self.sliderView value])];

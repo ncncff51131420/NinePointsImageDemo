@@ -11,6 +11,7 @@
 @interface NinePointsView : UIView
 
 
+-(void)initNinePatchImage:(UIImage *)image;
 
 -(void)initNinePatchImage:(UIImage *)image ninePoints:(NSArray *)ninePoints contentRange:(NinePatchContentRange *)contentRange;
 

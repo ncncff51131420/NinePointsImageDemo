@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NinePointsImageDemo/View/NinePointsView.m"
-            timestampString = "533549070.10901"
+            timestampString = "533549383.732945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "NinePointsView"
-            landmarkType = "3">
+            landmarkName = "-initWithFrame:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
