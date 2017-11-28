@@ -62,7 +62,7 @@ static const long kPrecisionUnit = 1000;
 - (void)startStretchingImage:(float)width height:(float)height{
 
 
-    NSMutableArray *mutableAry = [p_NinePatchImage mutableCopy];
+    NSMutableArray *mutableAry = [p_NinePatchAry mutableCopy];
 
     if (mutableAry.count>0) {
 

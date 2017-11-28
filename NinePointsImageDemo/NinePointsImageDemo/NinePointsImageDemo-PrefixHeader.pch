@@ -12,7 +12,6 @@
 #ifdef __OBJC__
 #import <Foundation/Foundation.h>
 #endif
-#import "PointLocation.h"
 #import "NinePatchContentRange.h"
 #import "NinePointVO.h"
 
