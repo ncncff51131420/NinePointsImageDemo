@@ -14,9 +14,6 @@
 
 -(void)initNinePatchImage:(UIImage *)image;
 
--(void)initNinePatchImage:(UIImage *)image stretchingSize:(CGSize)stretchingSize;
-
--(void)initNinePatchImage:(UIImage *)image ninePoints:(NSArray *)ninePoints contentRange:(NinePatchContentRange *)contentRange;
 
 -(void)redrawWithFontSize:(CGFloat)fontSize;
 
