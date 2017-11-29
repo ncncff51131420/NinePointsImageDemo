@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0CAADF1FCEA2A20079B420 /* NinePatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CAADE1FCEA2A20079B420 /* NinePatchManager.m */; };
 		2C35E8A41FC81296000ED28A /* bg_etcmap_callout.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C35E8A31FC81296000ED28A /* bg_etcmap_callout.9.png */; };
 		2C35E8A71FC90EA3000ED28A /* NinePointVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C35E8A61FC90EA3000ED28A /* NinePointVO.m */; };
 		2C35E8A91FC95A95000ED28A /* stretchingOnesPointsssss.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C35E8A81FC95A95000ED28A /* stretchingOnesPointsssss.9.png */; };
@@ -51,6 +52,8 @@
 /* Begin PBXFileReference section */
 		18BD03AFE55EF9CA021D9C22 /* Pods-NinePointsImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinePointsImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NinePointsImageDemo/Pods-NinePointsImageDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2C0CAAD91FCE87500079B420 /* NinePatchGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinePatchGlobal.h; sourceTree = "<group>"; };
+		2C0CAADD1FCEA2A20079B420 /* NinePatchManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinePatchManager.h; sourceTree = "<group>"; };
+		2C0CAADE1FCEA2A20079B420 /* NinePatchManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePatchManager.m; sourceTree = "<group>"; };
 		2C35E8A31FC81296000ED28A /* bg_etcmap_callout.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_etcmap_callout.9.png; sourceTree = "<group>"; };
 		2C35E8A51FC90EA3000ED28A /* NinePointVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinePointVO.h; sourceTree = "<group>"; };
 		2C35E8A61FC90EA3000ED28A /* NinePointVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePointVO.m; sourceTree = "<group>"; };
@@ -116,6 +119,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0CAADC1FCEA2500079B420 /* NinePatch */ = {
+			isa = PBXGroup;
+			children = (
+				2C85298D1FBED618000EE153 /* Utils */,
+				2C8529911FBED6BA000EE153 /* Models */,
+				2C85298A1FBED617000EE153 /* Categories */,
+				2C0CAADD1FCEA2A20079B420 /* NinePatchManager.h */,
+				2C0CAADE1FCEA2A20079B420 /* NinePatchManager.m */,
+			);
+			path = NinePatch;
+			sourceTree = "<group>";
+		};
 		2C8529471FBED544000EE153 = {
 			isa = PBXGroup;
 			children = (
@@ -139,11 +154,9 @@
 		2C8529521FBED544000EE153 /* NinePointsImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2C0CAADC1FCEA2500079B420 /* NinePatch */,
 				2C8529A51FBEE4E0000EE153 /* testResources */,
-				2C8529911FBED6BA000EE153 /* Models */,
-				2C85298A1FBED617000EE153 /* Categories */,
 				2C85298C1FBED618000EE153 /* Controller */,
-				2C85298D1FBED618000EE153 /* Utils */,
 				2C85298B1FBED617000EE153 /* View */,
 				2C8529531FBED544000EE153 /* AppDelegate.h */,
 				2C8529541FBED544000EE153 /* AppDelegate.m */,
@@ -441,6 +454,7 @@
 				2C8529901FBED680000EE153 /* UIImage+NinePoints.m in Sources */,
 				2C35E8A71FC90EA3000ED28A /* NinePointVO.m in Sources */,
 				2C8529551FBED544000EE153 /* AppDelegate.m in Sources */,
+				2C0CAADF1FCEA2A20079B420 /* NinePatchManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "NinePointsViewController.h"
 #import "NinePointsView.h"
 #import "Masonry.h"
+#import "NinePatchManager.h"
 
 @interface NinePointsViewController (){
     NinePointsView *p_view;

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MJNinePatch"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "nine patch"
 
   # This description is used to generate tags and improve search results.
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  =  "NinePointsImageDemo/**/*.{h,m}"
+  s.source_files  =  "NinePointsImageDemo/NinePointsImageDemo/NinePatch/**/*.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -130,6 +130,6 @@ Pod::Spec.new do |s|
    s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-   s.dependency "Masonry", "~> 1.0.2"
+   #s.dependency "Masonry", "~> 1.0.2"
 
 end
