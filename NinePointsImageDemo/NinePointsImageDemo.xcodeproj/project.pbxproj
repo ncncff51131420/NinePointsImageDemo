@@ -17,8 +17,6 @@
 		2C85295D1FBED544000EE153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C85295C1FBED544000EE153 /* Assets.xcassets */; };
 		2C8529601FBED544000EE153 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C85295E1FBED544000EE153 /* LaunchScreen.storyboard */; };
 		2C8529631FBED544000EE153 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529621FBED544000EE153 /* main.m */; };
-		2C85296D1FBED544000EE153 /* NinePointsImageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85296C1FBED544000EE153 /* NinePointsImageDemoTests.m */; };
-		2C8529781FBED544000EE153 /* NinePointsImageDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529771FBED544000EE153 /* NinePointsImageDemoUITests.m */; };
 		2C8529881FBED584000EE153 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8529861FBED584000EE153 /* MainViewController.m */; };
 		2C8529891FBED584000EE153 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8529871FBED584000EE153 /* MainViewController.xib */; };
 		2C8529901FBED680000EE153 /* UIImage+NinePoints.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85298F1FBED680000EE153 /* UIImage+NinePoints.m */; };
@@ -68,11 +66,7 @@
 		2C8529611FBED544000EE153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8529621FBED544000EE153 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C8529681FBED544000EE153 /* NinePointsImageDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinePointsImageDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C85296C1FBED544000EE153 /* NinePointsImageDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePointsImageDemoTests.m; sourceTree = "<group>"; };
-		2C85296E1FBED544000EE153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8529731FBED544000EE153 /* NinePointsImageDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NinePointsImageDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C8529771FBED544000EE153 /* NinePointsImageDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePointsImageDemoUITests.m; sourceTree = "<group>"; };
-		2C8529791FBED544000EE153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8529851FBED584000EE153 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		2C8529861FBED584000EE153 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		2C8529871FBED584000EE153 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -126,8 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				2C8529521FBED544000EE153 /* NinePointsImageDemo */,
-				2C85296B1FBED544000EE153 /* NinePointsImageDemoTests */,
-				2C8529761FBED544000EE153 /* NinePointsImageDemoUITests */,
 				2C8529511FBED544000EE153 /* Products */,
 				2C85299A1FBEDBF7000EE153 /* Frameworks */,
 				C858C56ACF1D9193B394D715 /* Pods */,
@@ -166,24 +158,6 @@
 				2C8529871FBED584000EE153 /* MainViewController.xib */,
 			);
 			path = NinePointsImageDemo;
-			sourceTree = "<group>";
-		};
-		2C85296B1FBED544000EE153 /* NinePointsImageDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				2C85296C1FBED544000EE153 /* NinePointsImageDemoTests.m */,
-				2C85296E1FBED544000EE153 /* Info.plist */,
-			);
-			path = NinePointsImageDemoTests;
-			sourceTree = "<group>";
-		};
-		2C8529761FBED544000EE153 /* NinePointsImageDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2C8529771FBED544000EE153 /* NinePointsImageDemoUITests.m */,
-				2C8529791FBED544000EE153 /* Info.plist */,
-			);
-			path = NinePointsImageDemoUITests;
 			sourceTree = "<group>";
 		};
 		2C85298A1FBED617000EE153 /* Categories */ = {
@@ -474,7 +448,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C85296D1FBED544000EE153 /* NinePointsImageDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +455,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C8529781FBED544000EE153 /* NinePointsImageDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

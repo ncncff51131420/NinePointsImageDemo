@@ -69,11 +69,11 @@ static const long kPrecisionUnit = 1000;
 
 }
 
--(void)initNinePatchImage:(UIImage *)image stretchingWidth:(CGFloat)stretchingWidth stretchingHeight:(CGFloat)stretchingHeight{
+-(void)initNinePatchImage:(UIImage *)image stretchingSize:(CGSize)stretchingSize{
 
     if (image) {
         [self initNinePatchImage:image];
-        [self startStretchingImage:stretchingWidth height:stretchingHeight];
+        [self startStretchingImage:stretchingSize.width height:stretchingSize.height];
 
     }
 
