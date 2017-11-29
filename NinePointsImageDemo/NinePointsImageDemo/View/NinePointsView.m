@@ -68,6 +68,18 @@ static const long kPrecisionUnit = 1000;
     }
 
 }
+
+-(void)initNinePatchImage:(UIImage *)image stretchingWidth:(CGFloat)stretchingWidth stretchingHeight:(CGFloat)stretchingHeight{
+
+    if (image) {
+        [self initNinePatchImage:image];
+        [self startStretchingImage:stretchingWidth height:stretchingHeight];
+
+    }
+
+}
+
+
 #pragma mark - scale method
 
 
@@ -184,8 +196,7 @@ static const long kPrecisionUnit = 1000;
 - (UIImage *)scaleToSize:(UIImage *)img size:(CGSize)size{
     // 创建一个bitmap的context
     // 并把它设置成为当前正在使用的context
-    size.width = size.width;
-    size.height = size.height;
+
     UIGraphicsBeginImageContext(size);
     // 绘制改变大小的图片
     [img drawInRect:CGRectMake(0, 0, size.width, size.height)];

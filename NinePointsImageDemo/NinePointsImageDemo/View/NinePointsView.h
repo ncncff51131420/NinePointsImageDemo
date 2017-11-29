@@ -13,6 +13,8 @@
 
 -(void)initNinePatchImage:(UIImage *)image;
 
+-(void)initNinePatchImage:(UIImage *)image stretchingWidth:(CGFloat)stretchingWidth stretchingHeight:(CGFloat)stretchingHeight;
+
 -(void)initNinePatchImage:(UIImage *)image ninePoints:(NSArray *)ninePoints contentRange:(NinePatchContentRange *)contentRange;
 
 -(void)redrawWithFontSize:(CGFloat)fontSize;
