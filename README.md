@@ -1,6 +1,8 @@
 # NinePointsImageDemo
 deal ninePoints
 
+现在已经引入pod管理，可以直接：'MJNinePatch','~>0.0.3’
+
 中文备注有点戳。。。
 
 1.网上其实有其他写的支持点9图变化的demo，但是要不很老，要不就是不满足需求。
