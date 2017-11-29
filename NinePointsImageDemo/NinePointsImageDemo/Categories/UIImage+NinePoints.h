@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NinePatchContentRange.h"
 
 @interface UIImage (NinePoints)
 

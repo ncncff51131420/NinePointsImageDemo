@@ -8,6 +8,8 @@
 #import "UIImage+NinePoints.h"
 #import "NinePatchUtils.h"
 #import "PointLocation.h"
+#import "NinePointVO.h"
+#import "NinePatchGlobal.h"
 
 static   const  NSString *kNinePatchEndName = @".9.png";
 

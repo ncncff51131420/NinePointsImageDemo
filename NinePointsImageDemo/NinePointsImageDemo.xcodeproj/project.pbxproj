@@ -50,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		18BD03AFE55EF9CA021D9C22 /* Pods-NinePointsImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NinePointsImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NinePointsImageDemo/Pods-NinePointsImageDemo.release.xcconfig"; sourceTree = "<group>"; };
+		2C0CAAD91FCE87500079B420 /* NinePatchGlobal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinePatchGlobal.h; sourceTree = "<group>"; };
 		2C35E8A31FC81296000ED28A /* bg_etcmap_callout.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_etcmap_callout.9.png; sourceTree = "<group>"; };
 		2C35E8A51FC90EA3000ED28A /* NinePointVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinePointVO.h; sourceTree = "<group>"; };
 		2C35E8A61FC90EA3000ED28A /* NinePointVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePointVO.m; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		2C8529931FBED8D4000EE153 /* PointLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointLocation.h; sourceTree = "<group>"; };
 		2C8529941FBED8D5000EE153 /* NinePatchContentRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NinePatchContentRange.h; sourceTree = "<group>"; };
 		2C8529951FBED8D5000EE153 /* NinePatchContentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NinePatchContentRange.m; sourceTree = "<group>"; };
-		2C8529991FBEDA4D000EE153 /* NinePointsImageDemo-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NinePointsImageDemo-PrefixHeader.pch"; sourceTree = "<group>"; };
 		2C85299B1FBEDBF7000EE153 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C85299D1FBEDD85000EE153 /* NinePointsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinePointsView.h; sourceTree = "<group>"; };
 		2C85299E1FBEDD85000EE153 /* NinePointsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinePointsView.m; sourceTree = "<group>"; };
@@ -152,7 +152,6 @@
 				2C85295E1FBED544000EE153 /* LaunchScreen.storyboard */,
 				2C8529611FBED544000EE153 /* Info.plist */,
 				2C8529621FBED544000EE153 /* main.m */,
-				2C8529991FBEDA4D000EE153 /* NinePointsImageDemo-PrefixHeader.pch */,
 				2C8529851FBED584000EE153 /* MainViewController.h */,
 				2C8529861FBED584000EE153 /* MainViewController.m */,
 				2C8529871FBED584000EE153 /* MainViewController.xib */,
@@ -193,6 +192,7 @@
 			children = (
 				2C35E8AD1FCD328E000ED28A /* NinePatchUtils.h */,
 				2C35E8AE1FCD328E000ED28A /* NinePatchUtils.m */,
+				2C0CAAD91FCE87500079B420 /* NinePatchGlobal.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";

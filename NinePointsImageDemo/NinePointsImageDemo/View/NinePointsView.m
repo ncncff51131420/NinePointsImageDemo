@@ -9,6 +9,7 @@
 #import "NinePointsView.h"
 #import "NinePatchUtils.h"
 #import "UIImage+NinePoints.h"
+#import "NinePointVO.h"
 
 static const long kPrecisionUnit = 1000;
 

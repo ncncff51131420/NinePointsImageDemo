@@ -1,19 +1,17 @@
 //
-//  NinePointsImageDemo-PrefixHeader.pch
+//  NinePatchGlobal.h
 //  NinePointsImageDemo
 //
-//  Created by mjbest on 2017/11/17.
+//  Created by mjbest on 2017/11/29.
 //  Copyright © 2017年 chinaway. All rights reserved.
 //
 
-#ifndef NinePointsImageDemo_PrefixHeader_pch
-#define NinePointsImageDemo_PrefixHeader_pch
+#ifndef NinePatchGlobal_h
+#define NinePatchGlobal_h
 
 #ifdef __OBJC__
 #import <Foundation/Foundation.h>
 #endif
-#import "NinePatchContentRange.h"
-#import "NinePointVO.h"
 
 typedef struct _TURGBAPixel {
     UInt8 red;
@@ -30,4 +28,5 @@ typedef struct _TURGBAPixel {
 #define TruncateWithin(VALUE, FLOOR, CEILING) ((( VALUE ) < ( FLOOR ))?(( FLOOR )):((( VALUE ) > ( CEILING ))?(( CEILING )):(( VALUE ))))
 #define TruncateAtZero(VALUE) TruncateBelow(VALUE, 0.0f)
 
-#endif /* NinePointsImageDemo_PrefixHeader_pch */
+
+#endif /* NinePatchGlobal_h */
