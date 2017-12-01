@@ -3,7 +3,6 @@ deal ninePoints
 
 现在已经引入pod管理，可以直接：'MJNinePatch','~>0.0.3’
 
-中文备注有点戳。。。
 
 1.网上其实有其他写的支持点9图变化的demo，但是要不很老，要不就是不满足需求。
 
@@ -13,7 +12,18 @@ deal ninePoints
 
 etc。。。
 
-本方法主要结合系统方法和一些自己的处理，使之适应各种情况下的点9图片拉伸变化。并在testResources文件夹下放了一些图片，方便大家测试 ，只需要修改MainViewController中传递的参数即可
+本方法主要结合系统方法和一些自己的处理，使之适应各种情况下的点9图片拉伸变化（包括多方向多点和有无内容填充区的支持）。并在testResources文件夹下放了一些图片，方便大家测试 ，只需要修改MainViewController中传递的参数即可
+
+使用方法如下：
+//传入点9图片。stretchingSize为需要拉伸到的宽高
+-(void)drawNinePatchImage:(UIImage *)image stretchingSize:(CGSize)stretchingSize;
+
+//image 传入点9图片
+//contenttext为显示文本，
+//textFont 为文本字体大小
+//viewMaxSize为显示的最大宽高，默认优先拉伸宽度，宽度达到上限拉伸高度，高度达到最大时候不在拉伸
+-(void)drawNinePatchImage:(UIImage *)image contentText:(NSString *)contentText textFont:(UIFont *)font  viewMaxSize:(CGSize)viewMaxSize;
+
 
 1. In fact, there are several demo of the change of support point 9 on the Internet, 
 but it is either very old or not satisfying the requirements.
