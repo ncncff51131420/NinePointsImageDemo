@@ -11,6 +11,7 @@
 
 @interface NinePointsView : UIView
 
+- (void) setText:(NSString *)contentString;
 
 -(void)initNinePatchImage:(UIImage *)image;
 

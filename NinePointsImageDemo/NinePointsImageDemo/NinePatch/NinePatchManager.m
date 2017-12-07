@@ -41,38 +41,46 @@ static const long kPrecisionUnit = 1000;
         [self initNinePatchImage:[NinePatchUtils  crop:CGRectMake(1, 1, image.size.width - 2, image.size.height - 2) image:image]
                       ninePoints:ninePatchs contentRange:contentRange];
     }
-
 }
 
--(void)drawNinePatchImage:(UIImage *)image stretchingSize:(CGSize)stretchingSize{
+-(UIImage *)drawNinePatchImage:(UIImage *)image stretchingSize:(CGSize)stretchingSize{
 
+    UIImage *resultImage;
     if (image) {
         [self drawNinePatchImage:image];
-        [self startStretchingImage:stretchingSize.width height:stretchingSize.height];
+        resultImage  = [self startStretchingImage:stretchingSize.width height:stretchingSize.height];
     }
-
+    return resultImage;
 }
 
--(void)drawNinePatchImage:(UIImage *)image contentText:(NSString *)contentText textFont:(UIFont *)font  viewMaxSize:(CGSize)viewMaxSize{
+-(UIImage *)drawNinePatchImage:(UIImage *)image contentText:(NSString *)contentText textFont:(UIFont *)font  viewMaxSize:(CGSize)viewMaxSize{
+    UIImage *resultImage;
     if (image) {
         NinePatchContentRange *contentRange = [image  getImageContentRange];
         NSArray *ninePatchs = [image getAllNinePatchAreaPoint:image];
         [self initNinePatchImage:[NinePatchUtils  crop:CGRectMake(1, 1, image.size.width - 2, image.size.height - 2) image:image]
                       ninePoints:ninePatchs contentRange:contentRange];
         CGSize stretchingSize =  [self compulationContentSize:contentText font:font rect:viewMaxSize contentRange:contentRange];
-        [self startStretchingImage:stretchingSize.width height:stretchingSize.height];
-        
-        [self drawNinePatchContent:contentText font:font contentRange:contentRange messageSize:stretchingSize];
+        resultImage =   [self startStretchingImage:stretchingSize.width height:stretchingSize.height];
+
     }
+    return resultImage;
 
 }
 
+- (NinePatchContentRange*)getBackgroundImageConstraints:(UIImage *)image{
+
+    NinePatchContentRange *contentRange = [image  getImageContentRange];
+
+
+    return contentRange;
+}
+
+
 #pragma mark - scale method
+- (UIImage *)startStretchingImage:(float)width height:(float)height{
 
-
-- (void)startStretchingImage:(float)width height:(float)height{
-
-
+    UIImage *resultImage;
     NSMutableArray *mutableAry = [p_NinePatchAry mutableCopy];
 
     if (mutableAry.count>0) {
@@ -107,10 +115,6 @@ static const long kPrecisionUnit = 1000;
 
             NinePointVO *vo = mutableAry[i];
             BOOL isLastImage = NO;
-
-            if ( i == mutableAry.count-1) {
-                isLastImage = YES;
-            }
             int  NinePatchCurrentWidth  = (int)(vo.variableRegionWidth*horizontalStretchUnitRatio);
 
             int  NinePatchCurrentHeight = (int)(vo.variableRegionHeight*verticalStretchUnitRatio);
@@ -142,14 +146,12 @@ static const long kPrecisionUnit = 1000;
                 ninePoint.topSpacing = ninePoint.topSpacing+NinePatchCurrentHeight;
             }
         }
-
+        resultImage = image;
     }else{
         //普通图片，异常情况
     }
-
+    return resultImage;
 }
-
-
 
 
 // 绘制点9图片，pointVO为此次变化区域，img为待变化图片，resizableSize为拉伸宽高，isLastImage判断是否是最后一次变化
@@ -215,12 +217,16 @@ static const long kPrecisionUnit = 1000;
                             rect:(CGSize)rect
                     contentRange:(NinePatchContentRange *)contentRange{
 
+    if (content.length==0 || font==0) {
+        return CGSizeMake(0, 0);
+    }
     NSMutableParagraphStyle* paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
     NSDictionary*attribute = @{NSFontAttributeName:font,NSParagraphStyleAttributeName:paragraphStyle};
-    CGSize messageSize = [content boundingRectWithSize:CGSizeMake(rect.width-contentRange.leftEdgeDistance-contentRange.rightEdgeDistance, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+    CGSize messageSize = [content boundingRectWithSize:CGSizeMake(rect.width-contentRange.leftEdgeDistance-contentRange.rightEdgeDistance, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
     return messageSize;
 }
+
 
 - (void)drawNinePatchContent:(NSString *)content
                         font:(UIFont *)font

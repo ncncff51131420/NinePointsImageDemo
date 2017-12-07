@@ -13,6 +13,7 @@
 @interface  NinePointsView(){
     CGFloat p_fontSize;
     UIImage *p_NinePatchImage;
+    NSString *message;
 }
 @end
 
@@ -30,9 +31,9 @@
 - (void)drawRect:(CGRect)rect{
 
     
-    NSString*message = @"testdatatestdatatestdatatestdatatestdatatestdatatestdatatestdatatestdata";
     UIFont *font = [UIFont systemFontOfSize:p_fontSize];
     [[NinePatchManager alloc] drawNinePatchImage:p_NinePatchImage contentText:message textFont:font viewMaxSize:CGSizeMake(rect.size.width, rect.size.height)];
+  //  [[NinePatchManager alloc] drawNinePatchImage:p_NinePatchImage stretchingSize:CGSizeMake(rect.size.width-50, rect.size.height-50)];
 }
 
 
@@ -45,6 +46,11 @@
     p_NinePatchImage = image;
 }
 - (void)dealloc {
+}
+
+- (void) setText:(NSString *)contentString{
+    message = contentString;
+    [self setNeedsDisplay];
 }
 
 -(void)redrawWithFontSize:(CGFloat)fontSize {
